@@ -2,15 +2,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-terraform {
-  backend "s3" {
-    bucket = "plat-ops-terraform-state-bucket"
-    key    = "backend/state"
-    region = "us-east-1"
-    encrypt = true
-  }
-}
-
 locals {
   env = "plat-ops-staging"
   name = "spin-terraform-platops-staging-bucket-demo"
